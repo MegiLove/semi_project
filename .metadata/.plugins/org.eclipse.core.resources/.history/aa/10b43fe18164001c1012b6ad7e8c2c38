@@ -1,0 +1,53 @@
+<%@page import="com.sist.vo.LocationVO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.sist.dao.LocationDAO"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+	pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+/*
+	String []province_arr = (String[])request.getAttribute("province_arr");
+	String []province_id = (String[])request.getAttribute("province_id");
+	String []province_db = (String[])request.getAttribute("province_db");
+	String []province_show = (String[])request.getAttribute("province_show");
+*/
+//$("province_db")
+%>
+
+
+	<h2 class="skip">- 관심 지역 관리 -</h2>
+
+
+			<fieldset>
+				<div type="button" onClick="${province_show[i]}">"${province_arr[i]}"</div>
+				<div style="display:none" id="${province_id}">
+					<ul id="district" class="listDistrict">
+					<c:forEach var="i" items="${province_db}">
+					<tr>
+					</tr>
+					</c:forEach >
+					</ul>
+				</div>
+			</fieldset>
+ 	
+	
+	<script>
+
+	function "${province_show[i]}"{
+		if(document.getElementById("${province_id}").style.display == "block"){
+			document.getElementById("${province_id}").style.display="none";
+		}
+		else{
+			document.getElementById("${province_id}").style.display="block"
+		}
+	}
+	
+	</script>
+</body>
+</html>

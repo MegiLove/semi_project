@@ -1,0 +1,35 @@
+package com.sist.action;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.sist.dao.LocationDAO;
+import com.sist.vo.LocationVO;
+public class showLocAction implements SistAction {
+	
+	@Override
+	public String proRequest(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		
+		LocationDAO dao = new LocationDAO();
+		ArrayList<LocationVO> list = dao.listAll();
+		HashMap<String,ArrayList<String>> provinces = new HashMap<String,ArrayList<String>>();
+		HashMap<String,ArrayList<String>> districts = new HashMap<String,ArrayList<String>>();
+		
+		
+		ArrayList<String> ord_provinces = dao.getProvince();
+		
+		
+		request.setAttribute("provinces", provinces);
+		request.setAttribute("districts", districts);
+		request.setAttribute("ord_provinces", ord_provinces);
+		
+		
+		return "showLoc.jsp";
+	}
+	
+}

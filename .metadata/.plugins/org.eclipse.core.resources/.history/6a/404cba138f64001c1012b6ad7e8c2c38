@@ -1,0 +1,48 @@
+<%@page import="java.util.HashMap"%>
+<%@page import="com.sist.vo.LocationVO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.sist.dao.LocationDAO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+/*
+	String []province_arr = (String[])request.getAttribute("province_arr");
+	String []province_id = (String[])request.getAttribute("province_id");
+	String []province_db = (String[])request.getAttribute("province_db");
+	String []province_show = (String[])request.getAttribute("province_show");
+*/
+//$("province_db")
+%>
+
+
+	<h2 class="skip">- 관심 지역 관리 -</h2>
+
+
+			<fieldset>
+			<% for(HashMap<String,ArrayList<String>> province : "${provinces}"){ %>
+				<div><%=province.toString() %></div>
+			<%}%>
+			</fieldset>
+ 	
+	
+	<script>
+<% for(int i =0 ; i<"${province_show.length}";i++){%>
+	function "${province_show[i]}"{
+		if(document.getElementById("${province_id[i]}").style.display == "block"){
+			document.getElementById("${province_id[i]}").style.display="none";
+		}
+		else{
+			document.getElementById("${province_id[i]}").style.display="block"
+		}
+	}
+	<%}%>
+	</script>
+</body>
+</html>

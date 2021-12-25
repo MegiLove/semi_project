@@ -1,0 +1,10 @@
+insertBoard.do
+insertBoardOK.do
+listBoard.do
+detailBoard.do
+updateBoard.do
+updateBoardOK.do
+deleteBoard.do
+deleteBoardOK.do
+login.do
+loginOK.do
