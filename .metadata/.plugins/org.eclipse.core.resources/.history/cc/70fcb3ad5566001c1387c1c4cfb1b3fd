@@ -1,0 +1,4 @@
+showLoc.do=com.sist.action.showLocAction
+insertQnA.do=com.sist.action.insertQnAAction
+
+showContent.do=com.sist.action.showContentAction

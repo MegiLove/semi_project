@@ -49,11 +49,12 @@ public class SistController extends HttpServlet {
 			while(keyList.hasNext()) {
 				String key = (String)keyList.next();
 				String clsName = prop.getProperty(key);
+				System.out.println("클래스이름 "+clsName);
 				SistAction obj = (SistAction)Class.forName(clsName).newInstance();
 				map.put(key, obj);
 			}
 		}catch (Exception e) {
-			System.out.println("���ܹ߻�:"+e.getMessage());
+			System.out.println("예외발생:"+e.getMessage());
 		}
 	}
 
