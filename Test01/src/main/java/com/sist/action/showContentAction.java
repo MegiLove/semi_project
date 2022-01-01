@@ -20,7 +20,7 @@ public class showContentAction implements SistAction {
 			throws ServletException, IOException {
 		int qna_no = Integer.parseInt(request.getParameter("qna_no"));
 		dao.updateHit(qna_no);
-		QnAVO b= dao.getBoard(qna_no);
+		QnAVO b= dao.getQnA(qna_no);
 		request.setAttribute("b", b);
 		return "showContent.jsp";
 	}

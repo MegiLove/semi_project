@@ -24,6 +24,17 @@ public class QnAVO {
 		this.qna_content = qna_content;
 		this.cust_id = cust_id;
 	}
+	
+	
+
+	public QnAVO(int qna_no, String qna_title, Date qna_date, int qna_hits, String cust_id) {
+		super();
+		this.qna_no = qna_no;
+		this.qna_title = qna_title;
+		this.qna_date = qna_date;
+		this.qna_hits = qna_hits;
+		this.cust_id = cust_id;
+	}
 
 	public int getQna_no() {
 		return qna_no;

@@ -33,12 +33,13 @@ public class QnADAO {
 			ConnectionProvider.close(conn, stmt, rs);
 		}catch (Exception e) {
 			System.out.println("예외발생:"+e.getMessage());
+			e.printStackTrace();
 		}
 		return n;
 	}
 	
 	public void updateHit(int qna_no) {
-		String sql = "update QnA set hit = hit + 1 where qna_no=?";
+		String sql = "update QnA set qna_hits = qna_hits + 1 where qna_no=?";
 		try {
 			Connection conn = ConnectionProvider.getConnection();
 			PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -47,6 +48,7 @@ public class QnADAO {
 			ConnectionProvider.close(conn, pstmt);
 		}catch (Exception e) {
 			System.out.println("예외발생:"+e.getMessage());
+			e.printStackTrace();
 		}
 	}
 	
@@ -64,11 +66,12 @@ public class QnADAO {
 			ConnectionProvider.close(conn, pstmt, rs);
 		}catch (Exception e) {
 			System.out.println("예외발생:"+e.getMessage());
+			e.printStackTrace();
 		}
 		return qna_no;
 	}
 	
-	public int insertBoard(QnAVO b) {
+	public int insertQnA(QnAVO b) {
 		int re = -1;
 		String sql = "insert into QnA values(?,?,sysdate,0,?,?)";
 //		int qna_no = getNextNo();
@@ -79,16 +82,18 @@ public class QnADAO {
 			pstmt.setString(2, b.getQna_title());
 			pstmt.setString(3, b.getQna_content());
 			pstmt.setString(4, b.getCust_id());
+			System.out.println(b.getQna_no()+","+b.getQna_title()+","+b.getQna_content()+","+b.getCust_id());
 			re = pstmt.executeUpdate();
 			ConnectionProvider.close(conn, pstmt);
 			
 		}catch (Exception e) {
 			System.out.println("예외발생:"+e.getMessage());
+			e.printStackTrace();
 		}
 		return re;
 	}
 	
-	public ArrayList<QnAVO> listBoard(int pageNUM, String orderColum, String searchColum, String keyword){
+	public ArrayList<QnAVO> listQnA(int pageNUM,/* String orderColum,*/ String searchColum, String keyword){
 		totalRecord = getTotalRecord(searchColum, keyword);
 		totalPage = (int)Math.ceil(totalRecord/(double)pageSIZE);
 		System.out.println("전체레코드 수 : "+totalRecord);
@@ -110,38 +115,41 @@ public class QnADAO {
 				sql2 += " where " + searchColum + " like '%"+keyword+"%'";
 			}
 			
-			String sql = "select qna_no, qna_title, qna_date, qna_hits, qna_content, cust_id from( "
-					+ "select rownum n, qna_no, qna_title, qna_date, qna_hits, qna_content, cust_id"
-					+ "from "+sql2+")"
-					+ "where n between ? and ?";
+			String sql = "select qna_no, qna_title, qna_date, qna_hits, cust_id from("
+					+ "select rownum n,qna_no, qna_title, qna_date, qna_hits, cust_id "
+					+ "from ("+sql2+"))"
+					+ "where n between ? and ? order by qna_no";
+			System.out.println("sql: "+sql);
 			
-			if(orderColum != null) {
-				sql = "select qna_no, qna_title, qna_date, qna_hits, qna_content, cust_id from( "
-						+ "select rownum n, qna_no, qna_title, qna_date, qna_hits, qna_content, cust_id "
-						+ "from ("+sql2+" order by "+orderColum+")) "
-						+ "where n between ? and ?";
-			}
+//			if(orderColum != null) {
+//				sql = "select qna_no, qna_title, qna_date, qna_hits, qna_content, cust_id from( "
+//						+ "select rownum n, qna_no, qna_title, qna_date, qna_hits, qna_content, cust_id "
+//						+ "from ("+sql2+" order by "+orderColum+")) "
+//						+ "where n between ? and ?";
+//			}
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, start);
 			pstmt.setInt(2, end);
 			ResultSet rs = pstmt.executeQuery();
+			
 			while(rs.next()) {
 				list.add(new QnAVO(
 						rs.getInt(1), 		
 						rs.getString(2), 
 						rs.getDate(3),
 						rs.getInt(4), 	
-						rs.getString(5), 	
-						rs.getString(6)));				
+						rs.getString(5) 	
+						));				
 			}
 			ConnectionProvider.close(conn, pstmt, rs);
 			
 		}catch (Exception e) {
 			System.out.println("예외발생:"+e.getMessage());
+			e.printStackTrace();
 		}
 		return list;
 	}
-	public QnAVO getBoard(int qna_no) {
+	public QnAVO getQnA(int qna_no) {
 		QnAVO b = null;
 		try {
 			Connection conn = ConnectionProvider.getConnection();
@@ -163,6 +171,7 @@ public class QnADAO {
 			
 		}catch (Exception e) {
 			System.out.println("예외발생:"+e.getMessage());
+			e.printStackTrace();
 		}
 		return b;
 	}

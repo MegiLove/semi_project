@@ -3,4 +3,7 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="com.sist.vo.LocationVO"/>
+    <fullyQualifiedTypeName name="com.sist.action.SistAction"/>
+    <fullyQualifiedTypeName name="com.sist.dao.QnADAO"/>
+    <fullyQualifiedTypeName name="com.sist.vo.QnAVO"/>
 </qualifiedTypeNameHistroy>

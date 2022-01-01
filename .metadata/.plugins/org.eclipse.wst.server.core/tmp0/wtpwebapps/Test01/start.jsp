@@ -8,7 +8,7 @@
 </head>
 <body>
 <%
-	response.sendRedirect("showLoc.do");
+	response.sendRedirect("listQnA.do");
 %>
 </body>
 </html>

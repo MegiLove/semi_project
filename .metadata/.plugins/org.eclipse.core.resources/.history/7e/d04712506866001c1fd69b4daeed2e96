@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="listQnA.do" method="post">
+	
+		<select name="searchColum">
+			<option value="qna_title">제목</option>
+			<option value="cust_id">아이디</option>			
+		</select>
+	    <input type="search" name="keyword">
+		<input type="submit" value="검색">
+	</form>
+<%
+	response.sendRedirect("listQnA.do");
+%>
+</body>
+</html>
