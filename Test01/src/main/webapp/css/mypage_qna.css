@@ -1,0 +1,189 @@
+@charset "UTF-8";
+div.mypage{
+	width: 1000px;
+    height: 500px;
+}
+div.menu_mypage{
+	width: 20%;
+    float: left;
+    box-sizing: border-box;
+}
+
+div.listQnA_mypage{
+	width: 80%;
+	float: right;
+	box-sizing: border-box;
+}
+
+div.show_mypage{
+	width: 80%;
+	float: right;
+	box-sizing: border-box;
+}
+
+div.update_mypage{
+	width: 80%;
+	float: right;
+	box-sizing: border-box;
+}
+
+#search{
+	padding-top: 10px;
+	text-align: left;
+}
+
+#loc{
+	padding-left: 20px;
+	text-align: left;
+}
+
+#table{
+	margin-top: 10px;
+	text-align: left;
+}
+.menu_button1{
+	width: 70%;
+	box-sizing: border-box;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+	padding: 20px 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.menu_button2{
+	width: 70%;
+	box-sizing: border-box;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+	padding: 20px 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.menu_button3{
+	width: 70%;
+	box-sizing: border-box;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+	padding: 20px 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+input.menu_button1{
+	background-color: skyblue;
+}
+
+input.menu_button2{
+	background-color: white;
+}
+
+input.menu_button3{
+	background-color: skyblue;
+}
+
+input.menu_button1:hover{
+	background-color: white;
+}
+
+input.menu_button3:hover{
+	background-color: white;
+}
+
+.register-submit {
+    text-align: left;
+}
+
+#submit_all1 {
+    width: 15%;
+    height: 35px;
+    font-size: 1.0em;
+    cursor: pointer;
+    background-color: #aaaaaa;
+    border: none;
+    font-weight: bold;
+    padding: 6px 30px 6px 30px;
+    border-radius: 10px;
+    color: white;
+    margin: 0px;
+}
+
+#submit_all2 {
+    width: 15%;
+    height: 35px;
+    font-size: 1.0em;
+    cursor: pointer;
+    background-color: #aaaaaa;
+    border: none;
+    font-weight: bold;
+    padding: 6px 30px 6px 30px;
+    border-radius: 10px;
+    color: white;
+    margin-left: 380px;  
+}
+
+#submit_all3 {
+    width: 12%;
+    height: 35px;
+    font-size: 1.0em;
+    cursor: pointer;
+    background-color: #aaaaaa;
+    border: none;
+    font-weight: bold;
+    padding: 6px 30px 6px 30px;
+    border-radius: 10px;
+    color: white;
+    margin-left: 270px;   
+}
+#submit_all4 {
+    width: 12%;
+    height: 35px;
+    font-size: 1.0em;
+    cursor: pointer;
+    background-color: #aaaaaa;
+    border: none;
+    font-weight: bold;
+    padding: 6px 30px 6px 30px;
+    border-radius: 10px;
+    color: white;
+    margin: 0px 0px 0px;  
+}
+
+.menu_mypage {
+    text-align: center;
+}
+
+#my_menu1 {
+    width: 80%;
+    height: 50px;
+    font-size: 1.0em;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    padding: 6px;
+    border-radius: 10px;
+    color: skyblue;
+}
+
+#my_menu {
+    width: 80%;
+    height: 50px;
+    font-size: 1.0em;
+    cursor: pointer;
+    background-color: skyblue;
+    border: none;
+    font-weight: bold;
+    padding: 6px;
+    border-radius: 10px;
+    color: white;
+}
+
+

@@ -1,0 +1,72 @@
+* {
+	font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+.register-tf {
+	color: black;
+	font-size: 1em;
+	margin-bottom: 5px;
+}
+
+.register-container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 700px;
+	padding: 20px 0;
+}
+
+#register-user {
+	width: 580px;
+	height: 30px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#register-article {
+	width: 640px;
+	height: 100%;
+	margin: 25px auto 100px;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	padding: 50px 50px;
+}
+
+.register-subtitle {
+    width: 100%;
+    font-size: 1em;
+    font-weight: bold;
+    color: rgb(58, 58, 58);
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.register-input {
+    height: 40px;
+    width: 100%;
+    display: inline-block;
+    font-size: 1em;
+    width: 100%;
+    border: none;
+    border-bottom: 1.5px solid #cccccc;
+    line-height: 40px;
+    margin-top: 5px;
+}
+
+
+.register-submit {
+    text-align: center;
+}
+
+#submit_all {
+    width: 80%;
+    height: 45px;
+    font-size: 1.3em;
+    cursor: pointer;
+    background-color: #aaaaaa;
+    border: none;
+    font-weight: bold;
+    padding: 6px;
+    border-radius: 10px;
+    color: white;
+}
+

@@ -1,0 +1,56 @@
+* {
+	font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+.register-container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 700px;
+	padding: 20px 0;
+}
+
+#register-user {
+	width: 580px;
+	height: 30px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#register-user {
+	width: 300px;
+	height: 25px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#register-ok {
+	width: 640px;
+	height: 100%;
+	margin: 25px auto 100px;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	padding: 50px 50px;
+	text-align: center;
+}
+
+.register-submit {
+    text-align: center;
+}
+
+#move-page {
+    width: 150px;
+    height: 45px;
+    font-size: 1.3em;
+    cursor: pointer;
+    background-color: #aaaaaa;
+    border: none;
+    font-weight: bold;
+    padding: 6px;
+    border-radius: 10px;
+    color: white;
+}
+
+#text {
+	margin-left: auto;
+	margin-right: auto;
+}

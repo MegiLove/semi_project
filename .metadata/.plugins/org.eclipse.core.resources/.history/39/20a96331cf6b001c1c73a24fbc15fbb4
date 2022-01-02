@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+*{
+	font-family: 'IBM Plex Sans KR', sans-serif;
+	font-size:16px;
+}
+
+#paging{
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+
+#paging-body{
+	display: inline-block;
+}
+
+#QnAtable{
+	text-align: center;
+	padding-top: 100px;
+}
+
+table{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table,td,th{
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+
+#keyword{
+	padding-bottom: 30px;
+}
+
+#menu li{
+	display: inline-block;
+	float: right;
+}
+
+#menu li a{
+	text-decoration: none;
+}
+
+#footer{
+	font-size: 12px;
+}

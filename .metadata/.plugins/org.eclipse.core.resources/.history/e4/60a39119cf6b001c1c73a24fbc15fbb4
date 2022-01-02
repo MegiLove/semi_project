@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+@charset "UTF-8";
+div.mypage{
+	width: 1000px;
+    height: 500px;
+}
+
+div.menu_mypage{
+	width: 20%;
+    float: left;
+    box-sizing: border-box;
+}
+
+div.loc_mypage{
+	width: 80%;
+	float: right;
+	box-sizing: border-box;
+}
+
+#search{
+	padding-top: 30px;
+	text-align: left;
+}
+
+#loc2{
+	padding-top: 0px;
+	text-align: left;
+}
+
+#table{
+	margin-top: 10px;
+	text-align: left;
+}
+.menu_button1{
+	width: 70%;
+	box-sizing: border-box;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+	padding: 20px 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.menu_button2{
+	width: 70%;
+	box-sizing: border-box;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+	padding: 20px 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.menu_button3{
+	width: 70%;
+	box-sizing: border-box;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+	padding: 20px 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+input.menu_button1{
+	background-color: skyblue;
+}
+
+input.menu_button2{
+	background-color: skyblue;
+}
+
+input.menu_button3{
+	background-color: white;
+}
+
+input.menu_button1:hover{
+	background-color: white;
+}
+
+input.menu_button2:hover{
+	background-color: white;
+}
+
+.menu_mypage {
+    text-align: center;
+}
+
+#my_menu1 {
+    width: 80%;
+    height: 50px;
+    font-size: 1.0em;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    padding: 6px;
+    border-radius: 10px;
+    color: skyblue;
+}
+
+#my_menu {
+    width: 80%;
+    height: 50px;
+    font-size: 1.0em;
+    cursor: pointer;
+    background-color: skyblue;
+    border: none;
+    font-weight: bold;
+    padding: 6px;
+    border-radius: 10px;
+    color: white;
+}
+
+
