@@ -13,7 +13,6 @@ import com.sist.dao.Clothes_etcDAO;
 import com.sist.dao.Clothes_outerDAO;
 import com.sist.dao.Clothes_topDAO;
 import com.sist.dao.FashionDAO;
-import com.sist.vo.Clothes_topVO;
 import com.sist.vo.FashionVO;
 
 public class Change_fashionAction implements SistAction {
@@ -56,7 +55,68 @@ public class Change_fashionAction implements SistAction {
 		System.out.println("자외선:"+uv);		
 		
 		
-		if((Integer.parseInt(tmp)) <= 11 && (Integer.parseInt(tmp)) >=10) {
+		if ((Integer.parseInt(tmp)) >= 27){
+			if((Integer.parseInt(pop)) == 0 ) {
+				if((Integer.parseInt(uv)) >= 7) {
+					fashion_no=4;
+				}else {
+					fashion_no=5;
+				}
+			}else if((Integer.parseInt(pop)) > 0  && (Integer.parseInt(pop)) < 30){
+				fashion_no=5;
+			}else {
+				fashion_no=6;
+			}	
+			
+		}else if((Integer.parseInt(tmp)) <= 26 && (Integer.parseInt(tmp)) >=23) {
+			if((Integer.parseInt(pop)) == 0 ) {
+				if((Integer.parseInt(uv)) >= 7) {
+					fashion_no=7;
+				}else {
+					fashion_no=8;
+				}
+			}else if((Integer.parseInt(pop)) > 0  && (Integer.parseInt(pop)) < 30){
+				fashion_no=8;
+			}else {
+				fashion_no=9;
+			}	
+		}else if((Integer.parseInt(tmp)) <= 22 && (Integer.parseInt(tmp)) >=20) {
+			if((Integer.parseInt(pop)) == 0 ) {
+				if((Integer.parseInt(uv)) >= 7) {
+					fashion_no=10;
+				}else {
+					fashion_no=11;
+				}
+			}else if((Integer.parseInt(pop)) > 0  && (Integer.parseInt(pop)) < 30){
+				fashion_no=11;
+			}else {
+				fashion_no=12;
+			}
+		}else if((Integer.parseInt(tmp)) <= 19 && (Integer.parseInt(tmp)) >=17) {
+			if((Integer.parseInt(pop)) == 0 ) {
+				if((Integer.parseInt(uv)) >= 7) {
+					fashion_no=13;
+				}else {
+					fashion_no=14;
+				}
+			}else if((Integer.parseInt(pop)) > 0  && (Integer.parseInt(pop)) < 30){
+				fashion_no=14;
+			}else {
+				fashion_no=15;
+			}
+		}else if((Integer.parseInt(tmp)) <= 16 && (Integer.parseInt(tmp)) >=12) {
+			if((Integer.parseInt(pop)) == 0 ) {
+				if((Integer.parseInt(uv)) >= 7) {
+					fashion_no=16;
+				}else {
+					fashion_no=17;
+				}
+			}else if((Integer.parseInt(pop)) > 0  && (Integer.parseInt(pop)) < 30){
+				fashion_no=17;
+			}else {
+				fashion_no=18;
+			}
+		}else if((Integer.parseInt(tmp)) <= 11 && (Integer.parseInt(tmp)) >=10) {
 			if((Integer.parseInt(pop)) == 0 ) {
 				if((Integer.parseInt(uv)) >= 7) {
 					fashion_no=19;
