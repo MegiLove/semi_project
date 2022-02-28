@@ -1,6 +1,7 @@
 # semi_project: Weather closet
 ### 주제선정이유
-- 날씨 데이터를 기반으로 사용자에게 그날의 온도에 맞게 옷차림을 추천해주는 사이트를 만들고자 함
+- 날씨 데이터를 기반으로 사용자에게 그날의 온도에 맞게 옷차림을 추천해주는 사이트를 만들고자 한다
+- 옷차림 밖에도 기본적인 그날의 기온, 강수량, 자외선 지수 등을 나타내준다  
 --------------------
 ### 차별화 전략
 - 타 사이트에서는 기온에 따른 옷차림만 추천해주었으나 자외선이나 바람을 분석하여 더욱더 세세한 옷차림을 추천  
@@ -15,7 +16,11 @@ ex) 여름에 기온이 높다고 무조건 반팔을 추천하지 않고 자외
 ![image](https://user-images.githubusercontent.com/91641650/155982147-b4f226d7-eedc-47c2-9e51-f2a0fada5ef4.png)
 ### ERD-physical
 ![image](https://user-images.githubusercontent.com/91641650/155982238-9a9e3352-4fde-4ec5-bbb4-e0a3f9bf3e7e.png)
-
+### 기상청 오픈 API활용
+![image](https://user-images.githubusercontent.com/91641650/155985563-948cc6f2-37d6-4408-8ec4-daa179fead13.png)
+#### 기상청의 단기예보 조회서비스 오픈 API의 지역별 지점코드를 활용하여 이 코드들을 insert문에 넣어 데이터베이스에 삽입했다  
+![image](https://user-images.githubusercontent.com/91641650/155986612-5937d776-ec2d-4e20-821c-76a6070a80f1.png)  
+#### 응답 메세지에서 이러한 단기예보 정보들을 얻을 수 있다  
 ### 맡은 기능
 - 카카오 api를 이용한 회원가입 기능
 - Help 문의사항 게시판 기능
